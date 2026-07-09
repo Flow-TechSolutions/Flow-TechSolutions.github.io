@@ -193,21 +193,32 @@
 
     .cta h2 {
       color: white;
-   .map-container {
-    width: 100%;
-    max-width: 1100px;
-    margin: 40px auto 0 auto;
-    border-radius: 22px;
-    overflow: hidden;
-    box-shadow: 0 15px 35px rgba(15,23,42,.15);
-}
+    }
 
-.map-container iframe {
-    display: block;
-    width: 100%;
-    height: 500px;
-    border: none;
-}
+    .location-section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px;
+    }
+
+    .map-container {
+      width: 100%;
+      max-width: 1100px;
+      height: 520px;
+      margin: 40px auto 0 auto;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+      background: white;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
+
     footer {
       text-align: center;
       padding: 30px 20px;
@@ -272,8 +283,13 @@
         font-size: 32px;
       }
 
-      .map-container iframe {
-        height: 300px;
+      .location-section {
+        padding: 55px 18px;
+      }
+
+      .map-container {
+        height: 340px;
+        border-radius: 16px;
       }
     }
 
@@ -472,7 +488,7 @@
     </div>
   </section>
 
-  <section id="location">
+  <section id="location" class="location-section">
     <h2>Our Location</h2>
     <p class="subtitle">
       Based in Nepal. Remote setup and support available for hotels and guesthouses.
@@ -481,7 +497,7 @@
     <div class="map-container">
       <iframe
         src="https://www.google.com/maps?q=Kathmandu,Nepal&output=embed"
-        allowfullscreen=""
+        allowfullscreen
         loading="lazy"
         referrerpolicy="no-referrer-when-downgrade">
       </iframe>
