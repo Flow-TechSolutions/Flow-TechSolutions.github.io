@@ -195,31 +195,32 @@
       color: white;
     }
 
+    /* Fixed location + map CSS: ensure selector and full-width map like before */
     .location-section {
-  text-align: center;          /* center inline-block children */
-  max-width: 1200px;
-  margin: auto;
-  padding: 70px 20px;
-}
+      max-width: 1200px;
+      margin: auto;
+      padding: 70px 20px;
+      text-align: center; /* center heading and subtitle */
+    }
 
-.map-container {
-  display: inline-block;       /* allows centering via text-align:center */
-  width: 90%;
-  max-width: 900px;            /* change to desired max width */
-  height: 520px;
-  margin: 40px auto 0;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
-  background: white;
-}
+    .map-container {
+      width: 100%;
+      max-width: 1100px;
+      height: 520px;
+      margin: 40px auto 0 auto;
+      border-radius: 22px;
+      overflow: hidden;
+      box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+      background: white;
+      display: block;
+    }
 
-.map-container iframe {
-  width: 100%;
-  height: 100%;
-  border: 0;
-  display: block;
-}
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
+    }
 
     footer {
       text-align: center;
