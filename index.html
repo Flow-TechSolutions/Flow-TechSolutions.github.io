@@ -6,7 +6,7 @@
   <title>Hotelmanagement-Flow | AI Hotel Automation Nepal</title>
 
   <!-- SEO & Social -->
-  <meta name="description" content="Hotelmanagement-Flow — AI-powered hotel automation for small hotels and guesthouses in Nepal. Automate bookings, guest management and reporting using Google Workspace and AI automation." />
+  <meta name="description" content="Hotelmanagement-Flow — AI-powered hotel automation for small hotels and guesthouses in Nepal. Automate bookings, guest management and reporting using Google Workspace." />
   <meta name="keywords" content="hotel automation, booking management, Nepal, Google Workspace, AI, guest management" />
   <meta name="author" content="Hotelmanagement-Flow" />
   <meta name="robots" content="index, follow" />
@@ -268,64 +268,129 @@
       color: var(--text-secondary);
     }
 
+    /* Modern How It Works Section */
     .process {
-      background: var(--bg-section);
+      background: linear-gradient(180deg, #f7f8fb 0%, #eef6ff 100%);
       border-radius: 24px;
     }
 
-    .steps-container {
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .step {
-      display: flex;
-      gap: 24px;
-      margin-bottom: 48px;
+    .steps-timeline {
       position: relative;
-      align-items: flex-start;
+      max-width: 900px;
+      margin: 60px auto 0;
+      padding: 0 20px;
     }
 
-    .step-number {
+    /* Vertical connecting line */
+    .steps-timeline::before {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 80px;
+      bottom: 0;
+      width: 3px;
+      background: linear-gradient(180deg, var(--secondary-blue), var(--accent-cyan));
+      border-radius: 2px;
+      z-index: 1;
+    }
+
+    .process-step {
+      margin-bottom: 50px;
+      position: relative;
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    /* Alternate left-right layout */
+    .process-step:nth-child(odd) {
+      flex-direction: row;
+    }
+
+    .process-step:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .process-step-content {
+      flex: 1;
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
+      border-left: 4px solid var(--secondary-blue);
+      transition: all 0.3s ease;
+    }
+
+    .process-step:nth-child(even) .process-step-content {
+      border-left: none;
+      border-right: 4px solid var(--secondary-blue);
+    }
+
+    .process-step-content:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+    }
+
+    .process-step-number {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+      box-shadow: 0 10px 30px rgba(37, 99, 235, 0.3);
+      z-index: 10;
+      flex-shrink: 0;
+      border: 4px solid #f7f8fb;
+    }
+
+    .process-step-content h3 {
+      font-size: 20px;
+      color: var(--primary-dark);
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .process-step-content p {
+      color: var(--text-secondary);
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Icon placeholder for future enhancements */
+    .step-icon {
+      display: none;
+    }
+
+    .process-step-content.with-icon {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+    }
+
+    .process-step-content.with-icon .step-icon {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 50px;
       height: 50px;
-      background: var(--secondary-blue);
-      color: white;
-      border-radius: 50%;
-      font-weight: bold;
-      font-size: 20px;
+      background: rgba(56, 189, 248, 0.1);
+      border-radius: 12px;
       flex-shrink: 0;
+      font-size: 28px;
     }
 
-    .step-content h3 {
-      color: var(--primary-dark);
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
-
-    .step-content p {
-      color: var(--text-secondary);
-      margin: 0;
-    }
-
-    /* Large arrow between steps */
-    .step::after {
-      content: "↓";
-      position: absolute;
-      left: 22px;
-      top: calc(100% + 8px);
-      font-size: 48px;
-      color: var(--secondary-blue);
-      font-weight: bold;
-      line-height: 1;
-      text-shadow: 0 0 0 var(--bg-section);
-    }
-
-    .step:last-child::after {
-      display: none;
+    .process-step-content.with-icon > div {
+      flex: 1;
     }
 
     .pricing {
@@ -612,25 +677,42 @@
         border-radius: 16px;
       }
 
-      .step {
-        gap: 18px;
-        margin-bottom: 42px;
+      /* Timeline adjustment for mobile */
+      .steps-timeline {
+        padding: 0;
       }
 
-      .step-number {
-        width: 42px;
-        height: 42px;
-        font-size: 16px;
+      .steps-timeline::before {
+        left: 20px;
+        top: 100px;
       }
 
-      .step-content h3 {
-        font-size: 16px;
+      .process-step {
+        flex-direction: column !important;
+        gap: 30px;
+        margin-bottom: 40px;
       }
 
-      .step::after {
-        font-size: 36px;
-        left: 18px;
-        top: calc(100% + 4px);
+      .process-step-number {
+        position: static;
+        transform: none;
+        width: 60px;
+        height: 60px;
+        font-size: 28px;
+      }
+
+      .process-step-content {
+        border-left: 4px solid var(--secondary-blue) !important;
+        border-right: none !important;
+        margin-left: 30px;
+      }
+
+      .process-step-content h3 {
+        font-size: 18px;
+      }
+
+      .process-step-content p {
+        font-size: 15px;
       }
     }
 
@@ -652,25 +734,19 @@
         font-size: 14px;
       }
 
-      .step {
-        gap: 16px;
-        margin-bottom: 40px;
+      .steps-timeline::before {
+        left: 16px;
       }
 
-      .step-number {
-        width: 38px;
-        height: 38px;
-        font-size: 14px;
+      .process-step-number {
+        width: 52px;
+        height: 52px;
+        font-size: 24px;
       }
 
-      .step-content h3 {
-        font-size: 15px;
-      }
-
-      .step::after {
-        font-size: 32px;
-        left: 15px;
-        top: calc(100% + 2px);
+      .process-step-content {
+        margin-left: 25px;
+        padding: 20px;
       }
     }
 
@@ -746,42 +822,42 @@
         A simple workflow designed for hotels that want less paper, fewer mistakes and better daily control.
       </p>
 
-      <div class="steps-container">
-        <div class="step">
-          <div class="step-number">1</div>
-          <div class="step-content">
+      <div class="steps-timeline">
+        <div class="process-step">
+          <div class="process-step-number">1</div>
+          <div class="process-step-content">
             <h3>Booking Email Arrives</h3>
             <p>A booking confirmation or request arrives in the hotel Gmail account.</p>
           </div>
         </div>
 
-        <div class="step">
-          <div class="step-number">2</div>
-          <div class="step-content">
+        <div class="process-step">
+          <div class="process-step-number">2</div>
+          <div class="process-step-content">
             <h3>AI Extracts Booking Details</h3>
             <p>The system reads dates, guest name, number of guests, room type, price and booking source.</p>
           </div>
         </div>
 
-        <div class="step">
-          <div class="step-number">3</div>
-          <div class="step-content">
+        <div class="process-step">
+          <div class="process-step-number">3</div>
+          <div class="process-step-content">
             <h3>Human Confirmation</h3>
             <p>Unclear bookings are marked for review. The hotel confirms important entries before they become final.</p>
           </div>
         </div>
 
-        <div class="step">
-          <div class="step-number">4</div>
-          <div class="step-content">
+        <div class="process-step">
+          <div class="process-step-number">4</div>
+          <div class="process-step-content">
             <h3>Google Sheets Is Updated</h3>
             <p>The booking, room status, revenue and guest overview are updated automatically.</p>
           </div>
         </div>
 
-        <div class="step">
-          <div class="step-number">5</div>
-          <div class="step-content">
+        <div class="process-step">
+          <div class="process-step-number">5</div>
+          <div class="process-step-content">
             <h3>Daily Monitoring</h3>
             <p>The system checks for missing data, double bookings, unpaid stays and operational issues.</p>
           </div>
@@ -873,7 +949,7 @@
 
         <div class="faq-item">
           <h3>Do you have access to my guest data?</h3>
-          <p>No. We set up the automation in your Google Workspace account, which you control. Critical data like passwords and sensitive information are reviewed by your staff before being stored. We never store personal data on our servers.</p>
+          <p>No. We set up the automation in your Google Workspace account, which you control. Critical data like passwords and sensitive information are reviewed by your staff before being stored.</p>
         </div>
 
         <div class="faq-item">
@@ -998,20 +1074,10 @@
             otherItem.classList.remove('active');
           }
         });
-        
         // Toggle current item
         this.classList.toggle('active');
       });
-
-      // Allow keyboard navigation (Enter/Space)
-      item.addEventListener('keypress', function(e) {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          this.click();
-        }
-      });
     });
   </script>
-
 </body>
 </html>
