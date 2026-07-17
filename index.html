@@ -6,7 +6,7 @@
   <title>Hotelmanagement-Flow | AI Hotel Automation Nepal</title>
 
   <!-- SEO & Social -->
-  <meta name="description" content="Hotelmanagement-Flow — AI-powered hotel automation for small hotels and guesthouses in Nepal. Automate bookings, guest management and reporting using Google Works[...]
+  <meta name="description" content="Hotelmanagement-Flow — AI-powered hotel automation for small hotels and guesthouses in Nepal. Automate bookings, guest management and reporting using Google Workspace and AI automation." />
   <meta name="keywords" content="hotel automation, booking management, Nepal, Google Workspace, AI, guest management" />
   <meta name="author" content="Hotelmanagement-Flow" />
   <meta name="robots" content="index, follow" />
@@ -273,31 +273,59 @@
       border-radius: 24px;
     }
 
+    .steps-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
     .step {
-      border-left: 4px solid var(--secondary-blue);
-      padding-left: 20px;
-      margin-bottom: 24px;
+      display: flex;
+      gap: 24px;
+      margin-bottom: 48px;
       position: relative;
+      align-items: flex-start;
     }
 
-    .step h3 {
+    .step-number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px;
+      background: var(--secondary-blue);
+      color: white;
+      border-radius: 50%;
+      font-weight: bold;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .step-content h3 {
       color: var(--primary-dark);
-      margin-bottom: 6px;
+      margin-bottom: 8px;
+      font-size: 18px;
     }
 
-    .step p {
+    .step-content p {
       color: var(--text-secondary);
+      margin: 0;
     }
 
-    /* Arrow styling between steps */
-    .step:not(:last-child)::after {
+    /* Large arrow between steps */
+    .step::after {
       content: "↓";
       position: absolute;
-      left: -13px;
-      bottom: -32px;
-      font-size: 28px;
+      left: 22px;
+      top: calc(100% + 8px);
+      font-size: 48px;
       color: var(--secondary-blue);
       font-weight: bold;
+      line-height: 1;
+      text-shadow: 0 0 0 var(--bg-section);
+    }
+
+    .step:last-child::after {
+      display: none;
     }
 
     .pricing {
@@ -584,9 +612,25 @@
         border-radius: 16px;
       }
 
-      .step:not(:last-child)::after {
-        font-size: 24px;
-        bottom: -28px;
+      .step {
+        gap: 18px;
+        margin-bottom: 42px;
+      }
+
+      .step-number {
+        width: 42px;
+        height: 42px;
+        font-size: 16px;
+      }
+
+      .step-content h3 {
+        font-size: 16px;
+      }
+
+      .step::after {
+        font-size: 36px;
+        left: 18px;
+        top: calc(100% + 4px);
       }
     }
 
@@ -608,9 +652,25 @@
         font-size: 14px;
       }
 
-      .step:not(:last-child)::after {
-        font-size: 20px;
-        bottom: -26px;
+      .step {
+        gap: 16px;
+        margin-bottom: 40px;
+      }
+
+      .step-number {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+      }
+
+      .step-content h3 {
+        font-size: 15px;
+      }
+
+      .step::after {
+        font-size: 32px;
+        left: 15px;
+        top: calc(100% + 2px);
       }
     }
 
@@ -686,32 +746,47 @@
         A simple workflow designed for hotels that want less paper, fewer mistakes and better daily control.
       </p>
 
-      <ol style="list-style: none;">
-        <li class="step">
-          <h3>1. Booking Email Arrives</h3>
-          <p>A booking confirmation or request arrives in the hotel Gmail account.</p>
-        </li>
+      <div class="steps-container">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Booking Email Arrives</h3>
+            <p>A booking confirmation or request arrives in the hotel Gmail account.</p>
+          </div>
+        </div>
 
-        <li class="step">
-          <h3>2. AI Extracts Booking Details</h3>
-          <p>The system reads dates, guest name, number of guests, room type, price and booking source.</p>
-        </li>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>AI Extracts Booking Details</h3>
+            <p>The system reads dates, guest name, number of guests, room type, price and booking source.</p>
+          </div>
+        </div>
 
-        <li class="step">
-          <h3>3. Human Confirmation</h3>
-          <p>Unclear bookings are marked for review. The hotel confirms important entries before they become final.</p>
-        </li>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Human Confirmation</h3>
+            <p>Unclear bookings are marked for review. The hotel confirms important entries before they become final.</p>
+          </div>
+        </div>
 
-        <li class="step">
-          <h3>4. Google Sheets Is Updated</h3>
-          <p>The booking, room status, revenue and guest overview are updated automatically.</p>
-        </li>
+        <div class="step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Google Sheets Is Updated</h3>
+            <p>The booking, room status, revenue and guest overview are updated automatically.</p>
+          </div>
+        </div>
 
-        <li class="step">
-          <h3>5. Daily Monitoring</h3>
-          <p>The system checks for missing data, double bookings, unpaid stays and operational issues.</p>
-        </li>
-      </ol>
+        <div class="step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Daily Monitoring</h3>
+            <p>The system checks for missing data, double bookings, unpaid stays and operational issues.</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section aria-labelledby="benefits-heading">
@@ -793,12 +868,12 @@
       <div class="faq-grid">
         <div class="faq-item">
           <h3>What if the service stops?</h3>
-          <p>Your data remains in your Google account. Since we only set up the automation layer, you keep full access to all your booking sheets, guest records, and historical data even if the service stops.</p>
+          <p>Your data remains in your Google account. Since we only set up the automation layer, you keep full access to all your booking sheets, guest records, and historical data even if the service changes.</p>
         </div>
 
         <div class="faq-item">
           <h3>Do you have access to my guest data?</h3>
-          <p>No. We set up the automation in your Google Workspace account, which you control. Critical data like passwords and sensitive information are reviewed by your staff before being stored. We never access your raw data.</p>
+          <p>No. We set up the automation in your Google Workspace account, which you control. Critical data like passwords and sensitive information are reviewed by your staff before being stored. We never store personal data on our servers.</p>
         </div>
 
         <div class="faq-item">
