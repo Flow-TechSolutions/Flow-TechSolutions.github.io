@@ -276,18 +276,17 @@
 
     .steps-timeline {
       position: relative;
-      max-width: 900px;
+      max-width: 800px;
       margin: 60px auto 0;
       padding: 0 20px;
     }
 
-    /* Vertical connecting line */
+    /* Vertical connecting line on the left */
     .steps-timeline::before {
       content: "";
       position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      top: 80px;
+      left: 34px;
+      top: 60px;
       bottom: 0;
       width: 3px;
       background: linear-gradient(180deg, var(--secondary-blue), var(--accent-cyan));
@@ -296,46 +295,16 @@
     }
 
     .process-step {
-      margin-bottom: 50px;
+      margin-bottom: 40px;
       position: relative;
       display: flex;
-      gap: 40px;
-      align-items: center;
-    }
-
-    /* Alternate left-right layout */
-    .process-step:nth-child(odd) {
-      flex-direction: row;
-    }
-
-    .process-step:nth-child(even) {
-      flex-direction: row-reverse;
-    }
-
-    .process-step-content {
-      flex: 1;
-      background: white;
-      padding: 28px;
-      border-radius: 16px;
-      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.1);
-      border-left: 4px solid var(--secondary-blue);
-      transition: all 0.3s ease;
-    }
-
-    .process-step:nth-child(even) .process-step-content {
-      border-left: none;
-      border-right: 4px solid var(--secondary-blue);
-    }
-
-    .process-step-content:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 32px rgba(15, 23, 42, 0.15);
+      gap: 30px;
+      align-items: flex-start;
+      padding-left: 20px;
     }
 
     .process-step-number {
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
+      position: relative;
       width: 70px;
       height: 70px;
       background: linear-gradient(135deg, var(--secondary-blue), var(--accent-cyan));
@@ -352,45 +321,34 @@
       border: 4px solid #f7f8fb;
     }
 
+    .process-step-content {
+      flex: 1;
+      background: white;
+      padding: 24px;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.08);
+      border-left: 4px solid var(--accent-cyan);
+      transition: all 0.3s ease;
+      margin-top: 8px;
+    }
+
+    .process-step-content:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(15, 23, 42, 0.15);
+    }
+
     .process-step-content h3 {
-      font-size: 20px;
+      font-size: 18px;
       color: var(--primary-dark);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       font-weight: 600;
     }
 
     .process-step-content p {
       color: var(--text-secondary);
-      font-size: 16px;
+      font-size: 15px;
       line-height: 1.6;
       margin: 0;
-    }
-
-    /* Icon placeholder for future enhancements */
-    .step-icon {
-      display: none;
-    }
-
-    .process-step-content.with-icon {
-      display: flex;
-      align-items: flex-start;
-      gap: 16px;
-    }
-
-    .process-step-content.with-icon .step-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 50px;
-      height: 50px;
-      background: rgba(56, 189, 248, 0.1);
-      border-radius: 12px;
-      flex-shrink: 0;
-      font-size: 28px;
-    }
-
-    .process-step-content.with-icon > div {
-      flex: 1;
     }
 
     .pricing {
@@ -683,36 +641,38 @@
       }
 
       .steps-timeline::before {
-        left: 20px;
-        top: 100px;
+        left: 34px;
+        top: 60px;
       }
 
       .process-step {
-        flex-direction: column !important;
-        gap: 30px;
-        margin-bottom: 40px;
+        flex-direction: row;
+        gap: 24px;
+        margin-bottom: 36px;
+        padding-left: 0;
       }
 
       .process-step-number {
-        position: static;
-        transform: none;
         width: 60px;
         height: 60px;
         font-size: 28px;
+        flex-shrink: 0;
+        margin-top: 0;
       }
 
       .process-step-content {
-        border-left: 4px solid var(--secondary-blue) !important;
-        border-right: none !important;
-        margin-left: 30px;
+        padding: 20px;
+        border-left: 4px solid var(--accent-cyan);
+        border-right: none;
+        margin-top: 4px;
       }
 
       .process-step-content h3 {
-        font-size: 18px;
+        font-size: 16px;
       }
 
       .process-step-content p {
-        font-size: 15px;
+        font-size: 14px;
       }
     }
 
@@ -735,7 +695,7 @@
       }
 
       .steps-timeline::before {
-        left: 16px;
+        left: 28px;
       }
 
       .process-step-number {
@@ -745,8 +705,11 @@
       }
 
       .process-step-content {
-        margin-left: 25px;
-        padding: 20px;
+        padding: 16px;
+      }
+
+      .process-step {
+        gap: 16px;
       }
     }
 
@@ -944,7 +907,7 @@
       <div class="faq-grid">
         <div class="faq-item">
           <h3>What if the service stops?</h3>
-          <p>Your data remains in your Google account. Since we only set up the automation layer, you keep full access to all your booking sheets, guest records, and historical data even if the service changes.</p>
+          <p>Your data remains in your Google account. Since we only set up the automation layer, you keep full access to all your booking sheets, guest records, and historical data even if the service stops.</p>
         </div>
 
         <div class="faq-item">
@@ -1001,81 +964,43 @@
       </div>
     </section>
 
-    <section aria-labelledby="privacy-heading">
-      <h2 id="privacy-heading">Data Ownership & Privacy</h2>
-      <p class="subtitle">
-        The hotel keeps control of its own Google account and data. We provide setup, automation and technical support.
-      </p>
-
-      <div class="grid">
-        <div class="card">
-          <h3>Your Data Stays Yours</h3>
-          <p>The hotel keeps ownership of Gmail, Google Sheets, Google Drive and guest records. You can export or delete data anytime.</p>
-        </div>
-
-        <div class="card">
-          <h3>Manual Review for Critical Data</h3>
-          <p>Unclear bookings, passport data, payments and sensitive information are flagged for staff review before being stored.</p>
-        </div>
-
-        <div class="card">
-          <h3>Backup & Recovery</h3>
-          <p>Systems can be backed up and restored to reduce the risk of data loss or broken sheets. We provide recovery guidance.</p>
-        </div>
-      </div>
+    <section class="cta" id="contact">
+      <h2>Ready to Transform Your Hotel?</h2>
+      <p>Join hotels and guesthouses in Nepal automating their operations. Start with a demo today.</p>
+      <a href="mailto:hotelmanagementflow@gmail.com" class="btn">Request a Demo</a>
     </section>
 
-    <section id="location" class="location-section" aria-labelledby="location-heading">
-      <h2 id="location-heading">Our Location</h2>
-      <p class="subtitle">
-        Based in Nepal. Remote setup and support available for hotels and guesthouses across the region.
-      </p>
-
-      <div class="map-container" role="region" aria-label="Map showing Kathmandu, Nepal">
-        <noscript>
-          <p>This map requires JavaScript to display. Please enable JavaScript or visit us at Kathmandu, Nepal.</p>
-        </noscript>
-        <iframe
-          title="Google map showing Kathmandu, Nepal"
-          src="https://www.google.com/maps?q=Kathmandu,Nepal&output=embed"
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-          aria-hidden="false">
-        </iframe>
+    <section class="location-section">
+      <h2>Our Location</h2>
+      <p class="subtitle">Based in Kathmandu, Nepal — serving small hotels and guesthouses across the country.</p>
+      <div class="map-container">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3532.2435768883143!2d85.32554!3d27.7089!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb199a06c2cf27%3A0xc5670a9173e5b6d!2sKathmandu%2C%20Nepal!5e0!3m2!1sen!2s!4v1234567890" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
-
-    <section id="contact" aria-labelledby="contact-heading">
-      <div class="cta">
-        <h2 id="contact-heading">Ready to modernize your hotel operations?</h2>
-        <p>
-          Request a demo and see how your hotel can move from paper to simple AI-powered automation.
-        </p>
-        <br />
-        <a href="mailto:hotelmanagementflow@gmail.com" class="btn">Contact Us</a>
-        <a href="https://wa.me/9779702523255" class="btn" target="_blank" rel="noopener noreferrer">WhatsApp</a>
-      </div>
-    </section>
-
   </main>
 
-  <footer role="contentinfo">
-    <p>© 2026 Hotelmanagement-Flow. AI hotel automation for Nepal.</p>
+  <footer>
+    <p>&copy; 2024 Hotelmanagement-Flow. All rights reserved. | <a href="mailto:hotelmanagementflow@gmail.com" style="color: var(--footer-text);">Contact</a></p>
   </footer>
 
   <script>
-    // FAQ Toggle Functionality
+    // FAQ accordion functionality
     document.querySelectorAll('.faq-item').forEach(item => {
       item.addEventListener('click', function() {
-        // Close other items
-        document.querySelectorAll('.faq-item').forEach(otherItem => {
-          if (otherItem !== this) {
-            otherItem.classList.remove('active');
-          }
-        });
-        // Toggle current item
         this.classList.toggle('active');
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href !== '#' && document.querySelector(href)) {
+          e.preventDefault();
+          document.querySelector(href).scrollIntoView({
+            behavior: 'smooth'
+          });
+        }
       });
     });
   </script>
