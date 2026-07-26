@@ -1,36 +1,3 @@
-Ja, klar! Dein Code sieht insgesamt sehr sauber, gut strukturiert und modern aus. Es gibt jedoch ein paar kleine **Fehler**, **unsichtbare Zeichen** (Non-breaking spaces) und **Barrierefreiheits-/Syntax-Optimierungen**, die korrigiert werden sollten:
-
----
-
-## 🔍 Wichtigste Korrekturen im Detail
-
-1. **Gefährliche Non-breaking Spaces (`&nbsp;` als versteckte Byte-Zeichen):**
-* **Problem:** In deinem Code befanden sich viele unsichtbare `\u00A0`-Zeichen (Steuerzeichen/Geschützte Leerzeichen) vor HTML-Tags und in CSS-Zeilen. Diese können zu Darstellungsfehlern oder Validierungsproblemen im Browser führen.
-* **Lösung:** Alle unsichtbaren Sonderzeichen wurden durch Standard-Leerzeichen ersetzt.
-
-
-2. **Fehlende Attribute beim `<iframe>`:**
-* **Problem:** Das `iframe` für Google Maps besaß ein leeres `allowfullscreen=""`.
-* **Lösung:** Korrigiert zu `allowfullscreen` (HTML5-Standard) sowie Ergänzung von `title="Google Maps Location"`, da Barrierefreiheits-Tools (Screenreader) sonst warnen.
-
-
-3. **FAQ Barrierefreiheit & Tastatur-Bedienung:**
-* **Problem:** Die FAQ-Elemente sind als `<div class="faq-item">` gebaut und haben ein `click`-Event. Tastatur-Nutzer (mit `Tab` und `Enter`/`Space`) können diese nicht auslösen.
-* **Lösung:** `tabindex="0"` und `role="button"` im HTML hinzugefügt sowie einen Keydown-Listener im JS eingebaut, damit man FAQ-Einträge auch per Tastatur aufklappen kann.
-
-
-4. **Aktualisierung der Jahreszahl im Footer:**
-* Das Copyright wurde auf ein dynamisches Jahr im Skript umgestellt (oder fest auf das aktuelle Jahr angepasst), statt auf 2024 zu verharren.
-
-
-
----
-
-## 💻 Korrigierter & Optimierter Code
-
-Hier ist dein vollständiger, bereinigter HTML-Code:
-
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
