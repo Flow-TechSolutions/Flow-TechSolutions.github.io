@@ -1,1 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
 
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Contact | Hotelmanagement-Flow
+  </title>
+
+  <meta
+    name="description"
+    content="Request a Hotelmanagement-Flow demonstration or discuss a hotel automation setup."
+  >
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-page="contact">
+  <a class="skip-link" href="#main-content">
+    Skip to main content
+  </a>
+
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">H</span>
+        <span>Hotelmanagement-Flow</span>
+      </a>
+
+      <nav
+        class="nav-links"
+        id="main-navigation"
+        aria-label="Main navigation"
+      >
+        <a class="nav-link" data-nav="features" href="features.html">
+          Features
+        </a>
+
+        <a class="nav-link" data-nav="how" href="how-it-works.html">
+          How It Works
+        </a>
+
+        <a class="nav-link" data-nav="pricing" href="pricing.html">
+          Pricing
+        </a>
+
+        <a class="nav-link" data-nav="security" href="security.html">
+          Data & Security
+        </a>
+
+        <a class="nav-link" data-nav="faq" href="faq.html">
+          FAQ
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="button button-small" href="contact.html">
+          Request Demo
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-lines"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="page-hero">
+      <div class="container page-hero-content">
+        <span class="eyebrow">
+          Contact
+        </span>
+
+        <h1>
+          Request a Demo
+        </h1>
+
+        <p>
+          Tell us about your property and which parts of booking,
+          room management or reporting currently require the most
+          manual work.
+        </p>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container contact-layout">
+        <aside class="contact-card">
+          <h2>
+            Contact
+          </h2>
+
+          <p>
+            You can contact Hotelmanagement-Flow directly or use
+            the form to create a pre-filled email.
+          </p>
+
+          <div class="contact-item">
+            <strong>Email</strong>
+
+            <a href="mailto:hotelmanagementflow@gmail.com">
+              hotelmanagementflow@gmail.com
+            </a>
+          </div>
+
+          <div class="contact-item">
+            <strong>Typical topics</strong>
+
+            <span>
+              Demo requests, pricing, custom workflows,
+              onboarding and technical questions.
+            </span>
+          </div>
+
+          <div class="contact-item">
+            <strong>Best preparation</strong>
+
+            <span>
+              Number of rooms, current booking sources and the
+              tasks that currently consume the most time.
+            </span>
+          </div>
+        </aside>
+
+        <div class="form-card">
+          <h2>
+            Tell Us About Your Hotel
+          </h2>
+
+          <form id="demo-form">
+            <div class="form-grid">
+              <div class="form-field">
+                <label for="name">
+                  Your name
+                </label>
+
+                <input
+                  id="name"
+                  name="name"
+                  type="text"
+                  autocomplete="name"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="hotel">
+                  Hotel / property
+                </label>
+
+                <input
+                  id="hotel"
+                  name="hotel"
+                  type="text"
+                  autocomplete="organization"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="email">
+                  Email
+                </label>
+
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                >
+              </div>
+
+              <div class="form-field">
+                <label for="rooms">
+                  Number of rooms
+                </label>
+
+                <input
+                  id="rooms"
+                  name="rooms"
+                  type="number"
+                  min="1"
+                  step="1"
+                >
+              </div>
+
+              <div class="form-field full">
+                <label for="plan">
+                  Interested package
+                </label>
+
+                <select id="plan" name="plan">
+                  <option value="Not sure">
+                    Not sure yet
+                  </option>
+
+                  <option value="Starter">
+                    Starter
+                  </option>
+
+                  <option value="Professional">
+                    Professional
+                  </option>
+
+                  <option value="Custom">
+                    Custom
+                  </option>
+                </select>
+              </div>
+
+              <div class="form-field full">
+                <label for="message">
+                  What would you like to automate?
+                </label>
+
+                <textarea
+                  id="message"
+                  name="message"
+                  placeholder="For example: booking emails, room availability, guest records, payments or reports."
+                ></textarea>
+              </div>
+
+              <div class="form-field full">
+                <button class="button" type="submit">
+                  Create Demo Request Email
+                </button>
+              </div>
+            </div>
+
+            <p class="form-note">
+              This static website does not send form data to a
+              server. The button opens your email application
+              with a prepared message.
+            </p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark">H</span>
+            <span>Hotelmanagement-Flow</span>
+          </a>
+
+          <p>
+            Practical hotel automation for small hotels and
+            guesthouses.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">Product</div>
+
+          <div class="footer-links">
+            <a href="features.html">Features</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">Information</div>
+
+          <div class="footer-links">
+            <a href="security.html">Data & Security</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span data-current-year>2026</span>
+        Hotelmanagement-Flow. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
