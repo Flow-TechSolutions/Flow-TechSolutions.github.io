@@ -8,1154 +8,441 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Hotelmanagement-Flow | AI Hotel Automation</title>
+  <title>
+    Hotelmanagement-Flow | AI Automation for Small Hotels
+  </title>
 
-  <!-- Basic SEO -->
   <meta
     name="description"
-    content="Hotelmanagement-Flow provides affordable AI-powered booking, room, guest and revenue automation for small hotels and guesthouses."
+    content="Hotelmanagement-Flow automates bookings, rooms, guest records and reporting for small hotels using Google Workspace and practical AI."
   >
 
-  <meta
-    name="keywords"
-    content="hotel automation, booking management, guest management, room management, Google Workspace automation, hotel AI, revenue tracking"
-  >
-
-  <meta name="author" content="Hotelmanagement-Flow">
+  <meta name="theme-color" content="#0f172a">
   <meta name="robots" content="index, follow">
 
-  <!-- Browser settings -->
-  <meta name="theme-color" content="#0f172a">
-  <meta name="color-scheme" content="light">
-
-  <!-- Relative paths also work on GitHub project pages -->
-  <link rel="icon" href="./favicon.ico">
-  <link rel="apple-touch-icon" href="./logo.png">
-
-  <!-- Open Graph -->
-  <meta
-    property="og:title"
-    content="Hotelmanagement-Flow | AI Hotel Automation"
-  >
-
-  <meta
-    property="og:description"
-    content="Affordable hotel automation for bookings, rooms, guests, payments and reporting using Google Workspace and AI."
-  >
-
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="./og-image.png">
-
-  <meta
-    property="og:image:alt"
-    content="Hotelmanagement-Flow AI hotel automation"
-  >
-
-  <!-- X / Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-
-  <meta
-    name="twitter:title"
-    content="Hotelmanagement-Flow | AI Hotel Automation"
-  >
-
-  <meta
-    name="twitter:description"
-    content="Simple AI-powered hotel automation for small hotels and guesthouses."
-  >
-
-  <meta name="twitter:image" content="./og-image.png">
-
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Hotelmanagement-Flow",
-    "description": "AI-powered hotel automation for small hotels and guesthouses.",
-    "logo": "./logo.png",
-    "email": "hotelmanagementflow@gmail.com",
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "contactType": "Customer Support",
-      "email": "hotelmanagementflow@gmail.com",
-      "availableLanguage": ["English", "German"]
-    },
-    "priceRange": "$20-$100"
-  }
-  </script>
-
-  <style>
-    :root {
-      --primary-dark: #0f172a;
-      --primary-blue: #1e3a8a;
-      --secondary-blue: #2563eb;
-      --accent-cyan: #38bdf8;
-      --accent-cyan-hover: #22d3ee;
-
-      --light-blue: #dbeafe;
-      --light-cyan: #93c5fd;
-
-      --background: #f7f8fb;
-      --background-alternative: #eef6ff;
-      --card-background: #ffffff;
-
-      --text-primary: #172033;
-      --text-secondary: #475569;
-
-      --dark-card: #1e293b;
-      --dark-border: #334155;
-
-      --footer-background: #020617;
-      --footer-text: #cbd5e1;
-
-      --section-width: 1150px;
-      --section-padding: 72px;
-      --horizontal-padding: 20px;
-
-      --border-radius-small: 8px;
-      --border-radius-medium: 16px;
-      --border-radius-large: 24px;
-
-      --shadow-small: 0 4px 14px rgba(15, 23, 42, 0.08);
-      --shadow-medium: 0 10px 28px rgba(15, 23, 42, 0.1);
-      --shadow-large: 0 16px 38px rgba(15, 23, 42, 0.15);
-    }
-
-    *,
-    *::before,
-    *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-      scroll-padding-top: 20px;
-    }
-
-    body {
-      width: 100%;
-      min-height: 100vh;
-      overflow-x: hidden;
-
-      font-family:
-        Inter,
-        system-ui,
-        -apple-system,
-        BlinkMacSystemFont,
-        "Segoe UI",
-        Arial,
-        sans-serif;
-
-      font-size: 16px;
-      line-height: 1.6;
-
-      color: var(--text-primary);
-      background: var(--background);
-
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      -webkit-text-size-adjust: 100%;
-    }
-
-    img,
-    svg,
-    video {
-      display: block;
-      max-width: 100%;
-    }
-
-    button,
-    input,
-    textarea,
-    select {
-      font: inherit;
-    }
-
-    a {
-      color: inherit;
-    }
-
-    .skip-link {
-      position: fixed;
-      top: 10px;
-      left: 10px;
-      z-index: 9999;
-
-      padding: 10px 14px;
-
-      color: var(--primary-dark);
-      background: #ffffff;
-
-      border-radius: var(--border-radius-small);
-      box-shadow: var(--shadow-medium);
-
-      text-decoration: none;
-
-      transform: translateY(-150%);
-      transition: transform 0.2s ease;
-    }
-
-    .skip-link:focus {
-      transform: translateY(0);
-    }
-
-    .container {
-      width: min(
-        calc(100% - (2 * var(--horizontal-padding))),
-        var(--section-width)
-      );
-
-      margin-inline: auto;
-    }
-
-    .section {
-      padding-block: var(--section-padding);
-    }
-
-    .section-heading {
-      max-width: 820px;
-      margin: 0 auto 44px;
-      text-align: center;
-    }
-
-    h1,
-    h2,
-    h3 {
-      line-height: 1.2;
-      text-wrap: balance;
-    }
-
-    h1 {
-      font-size: clamp(2.2rem, 6vw, 3.5rem);
-      letter-spacing: -0.035em;
-    }
-
-    h2 {
-      margin-bottom: 18px;
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      color: var(--primary-dark);
-      letter-spacing: -0.025em;
-    }
-
-    h3 {
-      font-size: 1.3rem;
-    }
-
-    p {
-      text-wrap: pretty;
-    }
-
-    .subtitle {
-      max-width: 760px;
-      margin-inline: auto;
-
-      color: var(--text-secondary);
-      font-size: 1.1rem;
-    }
-
-    .tag {
-      display: inline-flex;
-      align-items: center;
-
-      margin-bottom: 16px;
-      padding: 6px 13px;
-
-      color: var(--primary-blue);
-      background: var(--light-blue);
-
-      border-radius: 999px;
-
-      font-size: 0.875rem;
-      font-weight: 700;
-    }
-
-    .button-group {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 14px;
-    }
-
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-
-      min-height: 50px;
-      padding: 13px 26px;
-
-      color: var(--primary-dark);
-      background: var(--accent-cyan);
-
-      border: 2px solid transparent;
-      border-radius: var(--border-radius-small);
-
-      font-weight: 750;
-      line-height: 1.2;
-      text-align: center;
-      text-decoration: none;
-
-      cursor: pointer;
-
-      transition:
-        transform 0.2s ease,
-        background-color 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .button:hover {
-      background: var(--accent-cyan-hover);
-      box-shadow: 0 8px 20px rgba(56, 189, 248, 0.28);
-      transform: translateY(-2px);
-    }
-
-    .button:active {
-      transform: translateY(0);
-    }
-
-    .button-secondary {
-      color: #ffffff;
-      background: transparent;
-      border-color: var(--light-cyan);
-    }
-
-    .button-secondary:hover {
-      color: #ffffff;
-      background: rgba(255, 255, 255, 0.08);
-      border-color: #ffffff;
-    }
-
-    a:focus-visible,
-    button:focus-visible,
-    summary:focus-visible {
-      outline: 3px solid var(--accent-cyan);
-      outline-offset: 4px;
-    }
-
-    /* Hero */
-    .hero {
-      position: relative;
-      isolation: isolate;
-
-      min-height: 600px;
-      display: grid;
-      place-items: center;
-
-      overflow: hidden;
-
-      color: #ffffff;
-      background:
-        radial-gradient(
-          circle at 20% 20%,
-          rgba(56, 189, 248, 0.25),
-          transparent 35%
-        ),
-        radial-gradient(
-          circle at 80% 80%,
-          rgba(37, 99, 235, 0.26),
-          transparent 38%
-        ),
-        linear-gradient(
-          135deg,
-          var(--primary-dark),
-          var(--primary-blue)
-        );
-
-      padding: 80px var(--horizontal-padding);
-      text-align: center;
-    }
-
-    .hero-content {
-      width: min(100%, 880px);
-    }
-
-    .hero h1 {
-      margin-bottom: 22px;
-    }
-
-    .hero p {
-      max-width: 780px;
-      margin: 0 auto 34px;
-
-      color: var(--light-blue);
-      font-size: clamp(1.05rem, 2.5vw, 1.25rem);
-    }
-
-    /* Grids and cards */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 24px;
-    }
-
-    .card {
-      height: 100%;
-      padding: 28px;
-
-      background: var(--card-background);
-      border: 1px solid rgba(148, 163, 184, 0.2);
-      border-radius: var(--border-radius-medium);
-      box-shadow: var(--shadow-medium);
-
-      transition:
-        transform 0.2s ease,
-        box-shadow 0.2s ease,
-        border-color 0.2s ease;
-    }
-
-    .card:hover {
-      border-color: rgba(56, 189, 248, 0.5);
-      box-shadow: var(--shadow-large);
-      transform: translateY(-4px);
-    }
-
-    .card h3 {
-      margin-bottom: 12px;
-      color: var(--primary-blue);
-    }
-
-    .card p {
-      color: var(--text-secondary);
-    }
-
-    /* Process */
-    .process-section {
-      background:
-        linear-gradient(
-          180deg,
-          var(--background) 0%,
-          var(--background-alternative) 100%
-        );
-    }
-
-    .timeline {
-      position: relative;
-
-      max-width: 850px;
-      margin: 0 auto;
-      padding-left: 98px;
-    }
-
-    .timeline::before {
-      content: "";
-
-      position: absolute;
-      top: 36px;
-      bottom: 36px;
-      left: 34px;
-
-      width: 3px;
-
-      background:
-        linear-gradient(
-          180deg,
-          var(--secondary-blue),
-          var(--accent-cyan)
-        );
-
-      border-radius: 999px;
-    }
-
-    .process-step {
-      position: relative;
-      margin-bottom: 32px;
-    }
-
-    .process-step:last-child {
-      margin-bottom: 0;
-    }
-
-    .process-number {
-      position: absolute;
-      top: 8px;
-      left: -98px;
-      z-index: 1;
-
-      display: grid;
-      place-items: center;
-
-      width: 70px;
-      height: 70px;
-
-      color: #ffffff;
-      background:
-        linear-gradient(
-          135deg,
-          var(--secondary-blue),
-          var(--accent-cyan)
-        );
-
-      border: 5px solid var(--background-alternative);
-      border-radius: 50%;
-
-      box-shadow: 0 10px 28px rgba(37, 99, 235, 0.28);
-
-      font-size: 1.7rem;
-      font-weight: 800;
-    }
-
-    .process-content {
-      padding: 24px 26px;
-
-      background: #ffffff;
-      border-left: 4px solid var(--accent-cyan);
-      border-radius: 12px;
-      box-shadow: var(--shadow-small);
-    }
-
-    .process-content h3 {
-      margin-bottom: 8px;
-      color: var(--primary-dark);
-    }
-
-    .process-content p {
-      color: var(--text-secondary);
-    }
-
-    /* Pricing */
-    .pricing-section {
-      color: #ffffff;
-      background: var(--primary-dark);
-    }
-
-    .pricing-section h2,
-    .pricing-section .subtitle {
-      color: #ffffff;
-    }
-
-    .price-card {
-      height: 100%;
-      padding: 30px;
-
-      color: #ffffff;
-      background: var(--dark-card);
-
-      border: 1px solid var(--dark-border);
-      border-radius: 18px;
-
-      text-align: center;
-
-      transition:
-        transform 0.2s ease,
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-    }
-
-    .price-card:hover {
-      border-color: var(--accent-cyan);
-      box-shadow: 0 12px 30px rgba(56, 189, 248, 0.16);
-      transform: translateY(-4px);
-    }
-
-    .price-card.featured {
-      border-color: var(--accent-cyan);
-      box-shadow: 0 0 0 1px var(--accent-cyan);
-    }
-
-    .price {
-      margin: 18px 0;
-      color: var(--accent-cyan);
-
-      font-size: clamp(2rem, 5vw, 2.6rem);
-      font-weight: 800;
-      line-height: 1.1;
-    }
-
-    .price-period {
-      display: block;
-      margin-top: 7px;
-
-      color: #cbd5e1;
-
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .feature-list {
-      margin-top: 22px;
-      list-style: none;
-      text-align: left;
-    }
-
-    .feature-list li {
-      position: relative;
-
-      margin: 12px 0;
-      padding-left: 26px;
-
-      color: #dbe4f0;
-    }
-
-    .feature-list li::before {
-      content: "✓";
-
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      color: var(--accent-cyan);
-      font-weight: 800;
-    }
-
-    /* FAQ */
-    .faq-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 20px;
-
-      max-width: 1000px;
-      margin-inline: auto;
-    }
-
-    .faq-item {
-      align-self: start;
-
-      overflow: hidden;
-
-      background: #ffffff;
-      border: 1px solid rgba(148, 163, 184, 0.25);
-      border-left: 4px solid var(--accent-cyan);
-      border-radius: 12px;
-      box-shadow: var(--shadow-small);
-    }
-
-    .faq-item summary {
-      position: relative;
-
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-
-      padding: 22px 54px 22px 22px;
-
-      color: var(--primary-blue);
-
-      font-weight: 750;
-      line-height: 1.35;
-
-      cursor: pointer;
-      list-style: none;
-    }
-
-    .faq-item summary::-webkit-details-marker {
-      display: none;
-    }
-
-    .faq-item summary::after {
-      content: "+";
-
-      position: absolute;
-      right: 22px;
-
-      color: var(--accent-cyan);
-
-      font-size: 1.6rem;
-      font-weight: 500;
-      line-height: 1;
-    }
-
-    .faq-item[open] summary::after {
-      content: "−";
-    }
-
-    .faq-item p {
-      padding: 0 22px 22px;
-      color: var(--text-secondary);
-    }
-
-    /* Security and ownership section */
-    .ownership-section {
-      background: var(--background-alternative);
-    }
-
-    /* CTA */
-    .cta-wrapper {
-      padding:
-        var(--section-padding)
-        var(--horizontal-padding);
-    }
-
-    .cta {
-      width: min(100%, var(--section-width));
-      margin-inline: auto;
-      padding: 64px 30px;
-
-      color: #ffffff;
-      background:
-        linear-gradient(
-          135deg,
-          var(--secondary-blue),
-          var(--primary-dark)
-        );
-
-      border-radius: var(--border-radius-large);
-      box-shadow: var(--shadow-large);
-
-      text-align: center;
-    }
-
-    .cta h2 {
-      color: #ffffff;
-    }
-
-    .cta p {
-      max-width: 680px;
-      margin: 0 auto 28px;
-
-      color: var(--light-blue);
-      font-size: 1.08rem;
-    }
-
-    /* Footer */
-    footer {
-      padding: 30px var(--horizontal-padding);
-
-      color: var(--footer-text);
-      background: var(--footer-background);
-
-      text-align: center;
-    }
-
-    footer p {
-      margin: 0;
-    }
-
-    footer a {
-      color: var(--light-blue);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 3px;
-    }
-
-    footer a:hover {
-      color: #ffffff;
-    }
-
-    /* Tablet */
-    @media (max-width: 900px) {
-      :root {
-        --section-padding: 62px;
-      }
-
-      .grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    /* Mobile */
-    @media (max-width: 680px) {
-      :root {
-        --section-padding: 52px;
-        --horizontal-padding: 18px;
-      }
-
-      .hero {
-        min-height: auto;
-        padding-block: 64px;
-      }
-
-      .button-group {
-        flex-direction: column;
-        align-items: stretch;
-      }
-
-      .button {
-        width: 100%;
-        max-width: 360px;
-        margin-inline: auto;
-      }
-
-      .grid,
-      .faq-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .card,
-      .price-card {
-        padding: 24px;
-      }
-
-      .timeline {
-        padding-left: 70px;
-      }
-
-      .timeline::before {
-        left: 25px;
-      }
-
-      .process-number {
-        left: -70px;
-
-        width: 52px;
-        height: 52px;
-
-        border-width: 4px;
-
-        font-size: 1.3rem;
-      }
-
-      .process-content {
-        padding: 20px;
-      }
-
-      .process-content h3 {
-        font-size: 1.08rem;
-      }
-
-      .cta-wrapper {
-        padding-inline: 12px;
-      }
-
-      .cta {
-        padding: 48px 22px;
-        border-radius: 18px;
-      }
-    }
-
-    /* Very small devices */
-    @media (max-width: 380px) {
-      .timeline {
-        padding-left: 58px;
-      }
-
-      .timeline::before {
-        left: 20px;
-      }
-
-      .process-number {
-        left: -58px;
-
-        width: 44px;
-        height: 44px;
-
-        font-size: 1.1rem;
-      }
-
-      .process-content {
-        padding: 17px;
-      }
-    }
-
-    /* Reduced motion */
-    @media (prefers-reduced-motion: reduce) {
-      html {
-        scroll-behavior: auto;
-      }
-
-      *,
-      *::before,
-      *::after {
-        scroll-behavior: auto !important;
-        transition-duration: 0.01ms !important;
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body data-page="home">
   <a class="skip-link" href="#main-content">
     Skip to main content
   </a>
 
-  <header class="hero">
-    <div class="hero-content">
-      <span class="tag">Built for small hotels</span>
+  <header class="site-header">
+    <div class="container navbar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">H</span>
+        <span>Hotelmanagement-Flow</span>
+      </a>
 
-      <h1>Hotelmanagement-Flow</h1>
-
-      <p>
-        AI-powered hotel automation for small hotels and
-        guesthouses. Replace paper records, manual bookings and
-        disconnected spreadsheets with one simple workflow.
-      </p>
-
-      <div class="button-group">
-        <a href="#contact" class="button">
-          Request a Demo
+      <nav
+        class="nav-links"
+        id="main-navigation"
+        aria-label="Main navigation"
+      >
+        <a
+          class="nav-link"
+          data-nav="features"
+          href="features.html"
+        >
+          Features
         </a>
 
-        <a href="#how-it-works" class="button button-secondary">
+        <a
+          class="nav-link"
+          data-nav="how"
+          href="how-it-works.html"
+        >
           How It Works
         </a>
+
+        <a
+          class="nav-link"
+          data-nav="pricing"
+          href="pricing.html"
+        >
+          Pricing
+        </a>
+
+        <a
+          class="nav-link"
+          data-nav="security"
+          href="security.html"
+        >
+          Data & Security
+        </a>
+
+        <a
+          class="nav-link"
+          data-nav="faq"
+          href="faq.html"
+        >
+          FAQ
+        </a>
+      </nav>
+
+      <div class="nav-actions">
+        <a
+          class="button button-small"
+          href="contact.html"
+        >
+          Request Demo
+        </a>
+
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-label="Toggle navigation"
+          aria-controls="main-navigation"
+          aria-expanded="false"
+        >
+          <span class="nav-toggle-lines"></span>
+        </button>
       </div>
     </div>
   </header>
 
   <main id="main-content">
-    <!-- Features -->
-    <section
-      class="section"
-      aria-labelledby="features-heading"
-    >
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">
+            Built for small hotels
+          </span>
+
+          <h1>
+            Run Your Hotel With Less Manual Work
+          </h1>
+
+          <p>
+            Connect bookings, rooms, guests, payments and
+            reports in one practical workflow built around
+            Google Workspace and AI-assisted automation.
+          </p>
+
+          <div class="button-group">
+            <a class="button button-light" href="contact.html">
+              Request a Demo
+            </a>
+
+            <a
+              class="button button-outline"
+              href="how-it-works.html"
+              style="color: white; border-color: rgba(255,255,255,.35);"
+            >
+              See How It Works
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="hero-dashboard"
+          aria-label="Example hotel management dashboard"
+        >
+          <div class="dashboard-window">
+            <div class="dashboard-top">
+              <span class="dashboard-title">
+                Today's Overview
+              </span>
+
+              <span class="status">
+                System active
+              </span>
+            </div>
+
+            <div class="dashboard-body">
+              <div class="metric-grid">
+                <div class="metric">
+                  <span class="metric-label">
+                    ARRIVALS
+                  </span>
+
+                  <span class="metric-value">
+                    8
+                  </span>
+                </div>
+
+                <div class="metric">
+                  <span class="metric-label">
+                    DEPARTURES
+                  </span>
+
+                  <span class="metric-value">
+                    5
+                  </span>
+                </div>
+
+                <div class="metric">
+                  <span class="metric-label">
+                    OCCUPANCY
+                  </span>
+
+                  <span class="metric-value">
+                    82%
+                  </span>
+                </div>
+              </div>
+
+              <div class="booking-row">
+                <strong>Room 104</strong>
+                <span>Check-in 14:00</span>
+                <span>Paid</span>
+              </div>
+
+              <div class="booking-row">
+                <strong>Room 208</strong>
+                <span>Check-in 16:00</span>
+                <span>Paid</span>
+              </div>
+
+              <div class="booking-row">
+                <strong>Room 305</strong>
+                <span>Missing details</span>
+                <span>Review</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="trust-strip">
+      <div class="container trust-list">
+        <span class="trust-item">
+          Google Workspace based
+        </span>
+
+        <span class="trust-item">
+          Human oversight
+        </span>
+
+        <span class="trust-item">
+          No expensive PMS required
+        </span>
+
+        <span class="trust-item">
+          Adaptable workflows
+        </span>
+      </div>
+    </div>
+
+    <section class="section section-light">
       <div class="container">
         <div class="section-heading">
-          <h2 id="features-heading">
-            Modernize Hotel Operations Without Expensive Software
+          <span class="eyebrow">
+            One connected workflow
+          </span>
+
+          <h2>
+            Everything Important in One Clear System
           </h2>
 
           <p class="subtitle">
-            Manage bookings, guests, rooms, payments and reports
-            using Google Workspace, automation and practical AI
-            assistance.
+            Reduce repetitive administration without replacing
+            every tool your staff already knows.
           </p>
         </div>
 
-        <div class="grid">
+        <div class="card-grid">
           <article class="card">
+            <div class="card-icon">B</div>
+
             <h3>Booking Automation</h3>
 
             <p>
-              Extract booking information from incoming emails and
-              transfer it into a structured booking overview.
+              Extract important booking details from incoming
+              emails and transfer them into structured records.
             </p>
+
+            <a class="card-link" href="features.html">
+              Explore features →
+            </a>
           </article>
 
           <article class="card">
+            <div class="card-icon">R</div>
+
             <h3>Room Management</h3>
 
             <p>
-              Track room availability, check-ins, check-outs and
-              possible double bookings from one clear dashboard.
+              Track availability, check-ins, check-outs and
+              potential booking conflicts in one overview.
             </p>
+
+            <a class="card-link" href="features.html">
+              Explore features →
+            </a>
           </article>
 
           <article class="card">
+            <div class="card-icon">G</div>
+
             <h3>Guest Management</h3>
 
             <p>
-              Organize guest contact information, stay dates, booking
-              status and relevant communication.
+              Keep guest information, stay dates and booking
+              status structured and easier to find.
             </p>
+
+            <a class="card-link" href="features.html">
+              Explore features →
+            </a>
           </article>
 
           <article class="card">
+            <div class="card-icon">$</div>
+
             <h3>Revenue Tracking</h3>
 
             <p>
-              Monitor revenue, completed payments, outstanding
-              balances and booking performance.
+              Monitor booking revenue, completed payments and
+              outstanding balances.
             </p>
+
+            <a class="card-link" href="features.html">
+              Explore features →
+            </a>
           </article>
 
           <article class="card">
+            <div class="card-icon">AI</div>
+
             <h3>AI Data Checks</h3>
 
             <p>
-              Flag missing details, unusual prices, payment issues
-              and potential booking conflicts for human review.
+              Identify missing details, unusual values and
+              possible inconsistencies for human review.
             </p>
+
+            <a class="card-link" href="features.html">
+              Explore features →
+            </a>
           </article>
 
           <article class="card">
+            <div class="card-icon">G</div>
+
             <h3>Google-Based Workflow</h3>
 
             <p>
-              Continue using Gmail, Google Sheets, Drive and Calendar
-              while automation connects the individual processes.
+              Connect Gmail, Sheets, Drive and Calendar instead
+              of introducing another complicated platform.
             </p>
+
+            <a class="card-link" href="features.html">
+              Explore features →
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Process -->
-    <section
-      class="section process-section"
-      id="how-it-works"
-      aria-labelledby="process-heading"
-    >
+    <section class="section section-blue">
       <div class="container">
         <div class="section-heading">
-          <h2 id="process-heading">How It Works</h2>
+          <span class="eyebrow">
+            Simple process
+          </span>
 
-          <p class="subtitle">
-            A controlled workflow designed to reduce manual work
-            without removing human oversight.
-          </p>
-        </div>
-
-        <div class="timeline">
-          <article class="process-step">
-            <div class="process-number" aria-hidden="true">
-              1
-            </div>
-
-            <div class="process-content">
-              <h3>Booking Email Arrives</h3>
-
-              <p>
-                A booking confirmation or booking request arrives in
-                the hotel's Gmail account.
-              </p>
-            </div>
-          </article>
-
-          <article class="process-step">
-            <div class="process-number" aria-hidden="true">
-              2
-            </div>
-
-            <div class="process-content">
-              <h3>Booking Details Are Extracted</h3>
-
-              <p>
-                The system identifies dates, guest details, number of
-                guests, room type, price and booking source.
-              </p>
-            </div>
-          </article>
-
-          <article class="process-step">
-            <div class="process-number" aria-hidden="true">
-              3
-            </div>
-
-            <div class="process-content">
-              <h3>Unclear Information Is Reviewed</h3>
-
-              <p>
-                Incomplete or uncertain entries are marked so that
-                hotel staff can verify them before confirmation.
-              </p>
-            </div>
-          </article>
-
-          <article class="process-step">
-            <div class="process-number" aria-hidden="true">
-              4
-            </div>
-
-            <div class="process-content">
-              <h3>Hotel Records Are Updated</h3>
-
-              <p>
-                Booking, room, guest and revenue records are updated
-                in the connected Google Workspace tools.
-              </p>
-            </div>
-          </article>
-
-          <article class="process-step">
-            <div class="process-number" aria-hidden="true">
-              5
-            </div>
-
-            <div class="process-content">
-              <h3>Operational Issues Are Flagged</h3>
-
-              <p>
-                The system checks for missing data, double bookings,
-                unpaid stays and other relevant inconsistencies.
-              </p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Benefits -->
-    <section
-      class="section"
-      aria-labelledby="benefits-heading"
-    >
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="benefits-heading">
-            Less Administration, Better Control
+          <h2>
+            From Booking Email to Structured Hotel Records
           </h2>
 
           <p class="subtitle">
-            The system supports hotel staff by reducing repetitive
-            work and making operational information easier to access.
+            Automation handles repetitive steps while unclear
+            information stays visible for staff review.
           </p>
         </div>
 
-        <div class="grid">
-          <article class="card">
-            <h3>Less Paperwork</h3>
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">1</div>
 
-            <p>
-              Replace notebooks, paper records and disconnected files
-              with structured digital information.
-            </p>
+            <div class="step-content">
+              <h3>Booking arrives</h3>
+
+              <p>
+                A booking confirmation or request arrives in
+                the hotel's connected email account.
+              </p>
+            </div>
           </article>
 
-          <article class="card">
-            <h3>Fewer Errors</h3>
+          <article class="step">
+            <div class="step-number">2</div>
 
-            <p>
-              Reduce missed bookings, incorrect dates, forgotten
-              payments and avoidable room conflicts.
-            </p>
+            <div class="step-content">
+              <h3>Information is extracted</h3>
+
+              <p>
+                Dates, guest details, room type, price and
+                booking source are identified.
+              </p>
+            </div>
           </article>
 
-          <article class="card">
-            <h3>Clear Daily Overview</h3>
+          <article class="step">
+            <div class="step-number">3</div>
 
-            <p>
-              Review current check-ins, check-outs, room status and
-              open payments without searching through multiple files.
-            </p>
+            <div class="step-content">
+              <h3>Unclear data is flagged</h3>
+
+              <p>
+                Missing or uncertain information can be reviewed
+                before it is treated as final.
+              </p>
+            </div>
           </article>
 
-          <article class="card">
-            <h3>Familiar Tools</h3>
+          <article class="step">
+            <div class="step-number">4</div>
 
-            <p>
-              Build the workflow around commonly used services such
-              as Gmail, Google Sheets, Google Drive and Calendar.
-            </p>
+            <div class="step-content">
+              <h3>Records are updated</h3>
+
+              <p>
+                Relevant booking, room, guest and revenue data
+                is transferred to the connected tools.
+              </p>
+            </div>
           </article>
+        </div>
 
-          <article class="card">
-            <h3>Human Oversight</h3>
-
-            <p>
-              Important or uncertain information remains visible for
-              review instead of being accepted blindly.
-            </p>
-          </article>
-
-          <article class="card">
-            <h3>Adaptable Setup</h3>
-
-            <p>
-              Adjust room categories, booking sources, reports and
-              workflows to the requirements of each property.
-            </p>
-          </article>
+        <div
+          class="button-group"
+          style="justify-content:center; margin-top:38px;"
+        >
+          <a class="button" href="how-it-works.html">
+            View Complete Workflow
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Pricing -->
-    <section
-      class="section pricing-section"
-      aria-labelledby="pricing-heading"
-    >
+    <section class="section section-dark">
       <div class="container">
         <div class="section-heading">
-          <h2 id="pricing-heading">Simple Pricing</h2>
+          <span class="eyebrow">
+            Pricing
+          </span>
+
+          <h2>
+            Start Small and Expand When Needed
+          </h2>
 
           <p class="subtitle">
-            Flexible packages for small hotels, guesthouses and
+            Straightforward packages for small hotels and
             independent accommodation providers.
           </p>
         </div>
 
-        <div class="grid">
+        <div class="pricing-grid">
           <article class="price-card">
             <h3>Starter</h3>
 
             <div class="price">
               $20
-              <span class="price-period">per month</span>
+              <small>per month</small>
             </div>
 
             <ul class="feature-list">
@@ -1164,14 +451,22 @@
               <li>Basic booking overview</li>
               <li>Monthly support</li>
             </ul>
+
+            <a class="button button-light" href="contact.html">
+              Get Started
+            </a>
           </article>
 
           <article class="price-card featured">
+            <span class="price-badge">
+              MOST POPULAR
+            </span>
+
             <h3>Professional</h3>
 
             <div class="price">
               $50
-              <span class="price-period">per month</span>
+              <small>per month</small>
             </div>
 
             <ul class="feature-list">
@@ -1181,236 +476,193 @@
               <li>Operational reports</li>
               <li>Remote support</li>
             </ul>
+
+            <a class="button" href="contact.html">
+              Request Demo
+            </a>
           </article>
 
           <article class="price-card">
             <h3>Custom</h3>
 
             <div class="price">
-              On request
+              Custom
+              <small>individual quotation</small>
             </div>
 
             <ul class="feature-list">
               <li>Property-specific setup</li>
               <li>Advanced automation</li>
-              <li>Custom reports and dashboards</li>
+              <li>Custom dashboards</li>
               <li>Multiple properties</li>
               <li>Staff onboarding</li>
             </ul>
+
+            <a class="button button-light" href="contact.html">
+              Contact Us
+            </a>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Ownership and security -->
-    <section
-      class="section ownership-section"
-      aria-labelledby="ownership-heading"
-    >
+    <section class="section section-light">
       <div class="container">
         <div class="section-heading">
-          <h2 id="ownership-heading">
-            Keep Control of Your Data
+          <span class="eyebrow">
+            FAQ
+          </span>
+
+          <h2>
+            Common Questions
           </h2>
 
           <p class="subtitle">
-            The workflow is designed around accounts and documents
-            controlled by the hotel.
+            The FAQ layout uses independent columns so opening
+            one answer does not enlarge the neighbouring card.
           </p>
         </div>
 
-        <div class="grid">
-          <article class="card">
-            <h3>Your Accounts</h3>
+        <div
+          class="faq-columns"
+          data-accordion="single"
+        >
+          <div class="faq-stack">
+            <details class="faq-item">
+              <summary>
+                Who controls the hotel data?
+              </summary>
 
-            <p>
-              The hotel retains control over its Google account,
-              documents, calendars and stored information.
-            </p>
-          </article>
+              <div class="faq-answer">
+                <p>
+                  The hotel controls its Google Workspace account
+                  and determines which accounts, documents and
+                  permissions are used.
+                </p>
+              </div>
+            </details>
 
-          <article class="card">
-            <h3>Your Records</h3>
+            <details class="faq-item">
+              <summary>
+                Can the workflow be customized?
+              </summary>
 
-            <p>
-              Booking and guest records remain available in the
-              hotel's own tools, even when an automation is disabled.
-            </p>
-          </article>
+              <div class="faq-answer">
+                <p>
+                  Yes. Room types, booking sources, reports and
+                  automation rules can be adapted to the
+                  property's processes.
+                </p>
+              </div>
+            </details>
+          </div>
 
-          <article class="card">
-            <h3>Controlled Automation</h3>
+          <div class="faq-stack">
+            <details class="faq-item">
+              <summary>
+                Is every AI result accepted automatically?
+              </summary>
 
-            <p>
-              Automation rules can be reviewed, modified or stopped
-              without removing the underlying hotel records.
-            </p>
-          </article>
+              <div class="faq-answer">
+                <p>
+                  No. Unclear or incomplete information can be
+                  flagged for manual confirmation.
+                </p>
+              </div>
+            </details>
+
+            <details class="faq-item">
+              <summary>
+                Do we need new hotel software?
+              </summary>
+
+              <div class="faq-answer">
+                <p>
+                  Not necessarily. The workflow can build on
+                  Gmail, Google Sheets, Drive and Calendar.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+
+        <div
+          class="button-group"
+          style="justify-content:center; margin-top:34px;"
+        >
+          <a class="button button-outline" href="faq.html">
+            View All Questions
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section
-      class="section"
-      aria-labelledby="faq-heading"
-    >
-      <div class="container">
-        <div class="section-heading">
-          <h2 id="faq-heading">
-            Frequently Asked Questions
-          </h2>
-
-          <p class="subtitle">
-            Answers to common questions about the service and setup.
-          </p>
-        </div>
-
-        <div class="faq-grid">
-          <details class="faq-item">
-            <summary>
-              What happens if the service is stopped?
-            </summary>
-
-            <p>
-              Your underlying documents and records remain in your
-              own Google account. Disabling an automation does not
-              automatically remove your booking sheets, calendars or
-              historical information.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              Who controls the hotel data?
-            </summary>
-
-            <p>
-              The hotel controls its Google Workspace account and
-              determines which accounts, documents and permissions
-              are used for the setup.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              Is every AI result accepted automatically?
-            </summary>
-
-            <p>
-              No. Unclear or incomplete information can be marked for
-              manual confirmation before it is treated as final.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              Can the workflow be customized?
-            </summary>
-
-            <p>
-              Yes. Room types, booking sources, reporting fields,
-              payment tracking and automation rules can be adapted to
-              the property's processes.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              Are multiple properties supported?
-            </summary>
-
-            <p>
-              Multiple properties can be supported through a custom
-              setup with separate records, permissions and reporting
-              structures.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              How long does setup take?
-            </summary>
-
-            <p>
-              A basic setup can usually be prepared within several
-              working days. More complex workflows depend on the
-              number of rooms, booking sources and required reports.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              Is staff training available?
-            </summary>
-
-            <p>
-              Remote onboarding and staff guidance can be included
-              for Professional and Custom setups.
-            </p>
-          </details>
-
-          <details class="faq-item">
-            <summary>
-              Do we need new hotel software?
-            </summary>
-
-            <p>
-              Not necessarily. The service can build on familiar
-              Google Workspace tools instead of requiring a complete
-              replacement of the hotel's existing workflow.
-            </p>
-          </details>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section
-      class="cta-wrapper"
-      id="contact"
-      aria-labelledby="contact-heading"
-    >
-      <div class="cta">
-        <h2 id="contact-heading">
-          Ready to Simplify Your Hotel Operations?
+    <section class="cta-section">
+      <div class="cta-box">
+        <h2>
+          See How the Workflow Could Fit Your Hotel
         </h2>
 
         <p>
-          Request a demonstration and discuss which booking, room
-          management and reporting processes should be automated.
+          Tell us how you currently manage bookings, rooms and
+          reporting and we can discuss which parts make sense to
+          automate.
         </p>
 
-        <a
-          href="mailto:hotelmanagementflow@gmail.com?subject=Hotelmanagement-Flow%20Demo%20Request"
-          class="button"
-        >
+        <a class="button button-light" href="contact.html">
           Request a Demo
         </a>
       </div>
     </section>
   </main>
 
-  <footer>
-    <p>
-      &copy;
-      <span id="current-year">2026</span>
-      Hotelmanagement-Flow. All rights reserved.
-      |
-      <a href="mailto:hotelmanagementflow@gmail.com">
-        Contact
-      </a>
-    </p>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark">H</span>
+            <span>Hotelmanagement-Flow</span>
+          </a>
+
+          <p>
+            Practical hotel automation for small hotels and
+            guesthouses using familiar tools and controlled AI.
+          </p>
+        </div>
+
+        <div>
+          <div class="footer-title">
+            Product
+          </div>
+
+          <div class="footer-links">
+            <a href="features.html">Features</a>
+            <a href="how-it-works.html">How It Works</a>
+            <a href="pricing.html">Pricing</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="footer-title">
+            Information
+          </div>
+
+          <div class="footer-links">
+            <a href="security.html">Data & Security</a>
+            <a href="faq.html">FAQ</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        © <span data-current-year>2026</span>
+        Hotelmanagement-Flow. All rights reserved.
+      </div>
+    </div>
   </footer>
 
-  <script>
-    "use strict";
-
-    const yearElement = document.getElementById("current-year");
-
-    if (yearElement) {
-      yearElement.textContent = String(new Date().getFullYear());
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
