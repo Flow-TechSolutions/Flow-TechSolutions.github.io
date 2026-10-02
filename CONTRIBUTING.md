@@ -1,19 +1,43 @@
 # Contributing
 
-Thank you for your interest in contributing.
+Thank you for your interest in contributing to Flow-TechSolutions.
 
 ## Reporting Issues
 
-Please use the GitHub issue templates when reporting bugs or suggesting features.
+If you find a bug or unexpected behavior, please open a GitHub issue using the appropriate issue template.
 
-## Development
+Before creating a new issue, please check whether the problem has already been reported.
 
-1. Fork the repository.
-2. Create a new branch.
-3. Make your changes.
-4. Test your changes.
-5. Open a pull request.
+## Suggesting Improvements
+
+Feature requests and suggestions are welcome. Please use the feature request template and describe:
+
+- The problem or limitation
+- Your proposed solution
+- Any relevant context
 
 ## Pull Requests
 
-Please keep pull requests focused on a single change and provide a clear description of what was changed and why.
+If you would like to contribute code:
+
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes.
+4. Test the website locally.
+5. Open a pull request.
+
+Please keep pull requests focused on a single change whenever possible.
+
+## Code Quality
+
+Please make sure that:
+
+- HTML is valid and accessible
+- CSS remains responsive
+- JavaScript does not introduce unnecessary dependencies
+- Existing navigation and functionality continue to work
+- Changes work on both desktop and mobile devices
+
+## Questions
+
+For questions about the project, please open an issue or contact the maintainers.
