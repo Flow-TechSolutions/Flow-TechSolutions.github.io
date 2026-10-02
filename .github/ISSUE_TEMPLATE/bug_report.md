@@ -10,26 +10,27 @@ assignees: ""
 
 Describe the problem clearly.
 
-## Steps to reproduce
+## Steps to Reproduce
 
 1.
 2.
 3.
 
-## Expected behavior
+## Expected Behavior
 
-What should happen?
+Describe what you expected to happen.
 
-## Actual behavior
+## Actual Behavior
 
-What happened instead?
+Describe what happened instead.
 
 ## Environment
 
 - Browser:
 - Operating system:
 - Device:
+- Screen size, if relevant:
 
-## Additional context
+## Additional Context
 
-Add screenshots or other relevant information if necessary.
+Add screenshots, error messages, or other relevant information if available.
