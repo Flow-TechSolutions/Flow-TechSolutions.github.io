@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://flow-techsolutions.github.io/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://flow-techsolutions.github.io/features.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flow-techsolutions.github.io/how-it-works.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flow-techsolutions.github.io/pricing.html</loc>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://flow-techsolutions.github.io/security.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flow-techsolutions.github.io/faq.html</loc>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://flow-techsolutions.github.io/contact.html</loc>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://flow-techsolutions.github.io/blog/</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://flow-techsolutions.github.io/blog/hotel-automation-small-hotels.html</loc>
+    <lastmod>2026-10-04</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+</urlset>
